@@ -20,8 +20,7 @@ git clone https://github.com/RishOnBash/pkeep.git
 cd pkeep
 ```
 
-## Build the project using the Makefile
-
+## Compile
 ```
 make
 ```
@@ -32,6 +31,28 @@ Flag       Description
 -s         Save: Prompts for account name and password.
 -v         View: Lists all entries in the password file.
 -g         Generate: Outputs 5 random alphanumeric strings.
+```
+
+## Usage example
+```
+$ ./pkeep -s
+Enter account: Reddit
+Enter password: Reddit@123
+INFO: Password saved successfuly.
+
+$ ./pkeep -v
+Reddit
+ Password: Reddit@123
+------------------------------------------
+
+$ ./pkeep -g
+Generating random strings...
+
+rIrrkXiD16a8
+qheiK1D8Hqfj
+w28RZhcy0WgY
+J1EhIXCZ4cyf
+95tdb4WXe24N
 ```
 
 ## TODO
