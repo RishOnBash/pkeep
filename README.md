@@ -13,14 +13,14 @@ A lightweight, terminal-based password manager and generator written in C. Desig
 ## 🚀 Installation & Build
 Ensure you have `gcc`, `make`, and `openssl` installed in your environment.
 
-# Clone the repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/RishOnBash/pkeep.git
 cd pkeep
 ```
 
-# Build the project using the Makefile
+## Build the project using the Makefile
 
 ```
 make
