@@ -67,7 +67,6 @@ int main(int argc, char *argv[]) {
         for (int i=0; i<5; i++) {
             // requires Unix based system for this to work
             system("openssl rand -base64 15 | tr -d [:punct:] | cut -c1-12");
-            return 0;
         }
     } else {
         printf ("Usage: %s [Option]\n", argv[0]);
