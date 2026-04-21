@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define FILENAME "/.password-file"
+#define FILENAME "./.password-file"
 
 /* 
  * simple password manager
