@@ -7,13 +7,13 @@ INSTALL_DIR = $(PREFIX)/local/bin
 all: $(TARGET)
 
 $(TARGET): $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
+	@$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
 
 install:
-	mkdir -p $(INSTALL_DIR)
-	mv $(TARGET) $(INSTALL_DIR)
-	@echo "-------------------------"
-	@echo "> Installation successful"
+	@mkdir -p $(INSTALL_DIR)
+	@mv $(TARGET) $(INSTALL_DIR)
+	@echo "> Installed: $(TARGET)"
 
 clean:
-	rm -f $(TARGET)
+	@rm -f $(INSTALLED_DIR)/$(TARGET)
+	@echo "> Uninstalled: $(TARGET)"
