@@ -2,11 +2,18 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 TARGET = pkeep
 SRC = pkeep.c 
+INSTALL_DIR = $(PREFIX)/local/bin
 
 all: $(TARGET)
 
 $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
+
+install:
+	mkdir -p $(INSTALL_DIR)
+	mv $(TARGET) $(INSTALL_DIR)
+	@echo "-------------------------"
+	@echo "> Installation successful"
 
 clean:
 	rm -f $(TARGET)
