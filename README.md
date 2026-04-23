@@ -11,18 +11,27 @@ A lightweight, terminal-based password manager and generator written in C. Desig
 - **Generator**: Create 12-character alphanumeric strings using OpenSSL's secure random source.
 
 ## 🚀 Installation & Build
-Ensure you have `gcc`, `make`, and `openssl` installed in your environment.
 
-## Clone the repository
+### Clone the repository
 
-```bash
+```
 git clone https://github.com/RishOnBash/pkeep.git
 cd pkeep
 ```
 
-## Compile
+### Compile and install
+
 ```
-make
+make && make install
+```
+
+### Export `$PATH` (Termux only)
+
+If `$PREFIX/local/bin` is not set as `$PATH` you need to add it to your `.bashrc`
+
+```
+export PATH="$PATH:$PREFIX/local/bin" >> .bashrc
+source .bashrc
 ```
 
 ## Usage
@@ -33,19 +42,19 @@ Flag       Description
 -g         Generate: Outputs 5 random alphanumeric strings.
 ```
 
-## Usage example
+## Example
 ```
-$ ./pkeep -s
+$ pkeep -s
 Enter account: Reddit
 Enter password: Reddit@123
 INFO: Password saved successfuly.
 
-$ ./pkeep -v
+$ pkeep -v
 Reddit
  Password: Reddit@123
 ------------------------------------------
 
-$ ./pkeep -g
+$ pkeep -g
 Generating random strings...
 
 rIrrkXiD16a8
