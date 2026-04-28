@@ -15,5 +15,5 @@ install:
 	@echo "> Installed: $(TARGET)"
 
 clean:
-	@rm -f $(INSTALLED_DIR)/$(TARGET)
+	@rm -f $(INSTALL_DIR)/$(TARGET)
 	@echo "> Uninstalled: $(TARGET)"
